@@ -1,0 +1,18 @@
+
+<div class="row comp move">
+    <div class="col-md-4 myclass" *ngFor="let product of products">
+      <div class="card mb-4 shadow-sm indicard">
+        <img [src]="product.img" class="card-img-top" alt="{{ product.name }}" height="200px" width="10px">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">Price: Rs {{ product.price.toFixed(2) }}</p>
+          <p class="card-text">Rating: {{ product.rating }} ★</p>
+          <div class="offer-box" *ngIf="product.offer > 0">
+            {{ product.offer }}% OFF
+          </div>
+          <button class="mybutton" (click)="viewProduct(product)">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

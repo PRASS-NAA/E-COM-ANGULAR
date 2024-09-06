@@ -1,0 +1,35 @@
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    max-width: 1200px;
+    position: relative;
+    top: 108px;
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  h3.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  p.card-text {
+    margin-bottom: 10px;
+  }
+  
+  button.btn {
+    font-size: 1.2rem;
+  }
+  

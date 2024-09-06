@@ -1,0 +1,17 @@
+<div class="form-container">
+    <h2 class="text-center text-white head">Create Account</h2>
+    <form (ngSubmit)="onsubmit()" #myform="ngForm">
+        <div class="form-group">
+            <label for="mail">Enter Mail Id </label>
+            <input type="mail" class="form-control" id="mail" name="mail" ngModel email required #mail="ngModel">
+            <div>
+                <small *ngIf="mail.invalid && mail.touched">Enter Valid Mail Id</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-block" value="Verify Mail" [disabled]="myform.invalid">
+            
+        </div>
+    </form>
+</div>

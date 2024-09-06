@@ -1,0 +1,17 @@
+<div class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form (ngSubmit)="onSubmit()"> <!--EVENT BINDING (WHEN ngSubmit happens ...do something)-->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" [(ngModel)]="username" name="username" required> <!--TWO WAY BINDING HERE-->
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" required>
+        </div>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  

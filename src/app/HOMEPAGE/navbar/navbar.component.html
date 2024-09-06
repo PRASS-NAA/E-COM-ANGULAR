@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)"><img src="/logo.png" height="50px" width="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart" routerLinkActive="active">CART</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <select [(ngModel)] = "filter">
+            <option value="pricedesc">PRICE (HIGHEST TO LOWEST)</option>
+            <option value="priceasc">PRICE (LEAST TO HIGHEST)</option>
+          </select>
+          <button class="btn btn-primary" type="button" (click)="applyFilter()">Apply FIlter</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <app-slider></app-slider>
+
+  <div class="container mt-4">
+    <app-body [search]="item"></app-body>
+  </div>

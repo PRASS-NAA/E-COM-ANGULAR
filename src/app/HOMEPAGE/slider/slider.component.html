@@ -1,0 +1,19 @@
+<div id="imageSlider" class="carousel slide" data-bs-ride="carousel" [ngStyle]="{'margin-top': '57px'}">
+  <h2 [ngStyle]="{'color':'white','position': 'relative','left': '650px','margin-bottom': '60px'}">Featured Products</h2>
+  <div class="carousel-inner">
+    <div 
+      class="carousel-item"
+      [ngClass]="{'active': x === i + 1}" 
+      *ngFor="let product of productarr; let i = index">
+      <img [src]="product.img" class="d-block w-100" [ngStyle]="{'width': '60%', 'height': '40%', 'object-fit': 'contain', 'margin': 'auto'}">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev" (click)="prev()" >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next" (click)="next()">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

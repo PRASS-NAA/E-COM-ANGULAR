@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    margin-bottom: 0.5rem;
+}
+
+.offer-box {
+    background-color: #ff6347;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.comp{
+    margin-top:40px;
+}
+
+.indicard{
+    width: 329px;
+    height: 332px;
+}
+
+.move{
+    position: relative;
+    left: 83px;
+}
+
+.myclass{
+    margin-bottom: 39px;
+}
+
+.mybutton{
+    position: relative;
+    left: 184px;
+    top: -47px;
+}

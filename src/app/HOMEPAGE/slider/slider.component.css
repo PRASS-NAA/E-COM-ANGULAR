@@ -1,0 +1,21 @@
+.carousel-inner img {
+    max-height: 400px; /* Medium size for images */
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    filter: invert(100%);
+    color: white; 
+  }
+  
+  .carousel {
+    margin-bottom: 20px; /* Space below the slider */
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: white; /* Set background color for the icon */
+    border-radius: 50%; /* Optional: for a rounded button */
+  }
+  

@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="row">
+      
+      <div class="col-lg-8">
+        <h2 [ngStyle]="{'color':'white'}">Your Shopping Cart</h2>
+        <div *ngFor="let item of cartprod" class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="item.img" class="img-fluid rounded-start" alt="{{ item.name }}">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">Price: Rs{{ item.price.toFixed(2) }}</p>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-outline-secondary btn-sm" (click)="decreaseQuantity(item)">-</button>
+                  <input type="number" [(ngModel)]="item.quantity" class="form-control mx-2" style="width: 60px;" min="1">
+                  <button class="btn btn-outline-secondary btn-sm" (click)="increaseQuantity(item)">+</button>
+                </div>
+                <p class="card-text mt-2">Subtotal: Rs {{ (item.price * item.quantity).toFixed(1) }}</p>
+                <button class="btn btn-danger btn-sm mt-2" (click)="removeFromCart(item)">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Order Summary</h3>
+            <p>Total Items: {{ getTotalItems() }}</p>
+            <p>Total Price: ${{ getTotalPrice() }}</p>
+            <button class="btn btn-primary btn-lg btn-block" (click) = "checkout()" [ngStyle]="{'position': 'relative',
+    'left': '80px'}">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

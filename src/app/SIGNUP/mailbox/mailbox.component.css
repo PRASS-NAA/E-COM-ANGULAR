@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 0 auto;
+    position: relative;
+    top: 187px;
+    left: -7px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: white;
+    
+}
+
+.form-check-label {
+    color: white;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+}
+
+.form-check-input {
+    width: auto;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    left: 125px;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.text-white {
+    color: white;
+}
+
+.text{
+    margin-right: 14px;
+}
+
+.head{
+    margin-bottom: 28px;
+}
+
+input.ng-invalid.ng-touched{
+    border:1px solid red;
+}
+
+small{
+    color: red;
+}

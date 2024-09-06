@@ -1,0 +1,69 @@
+<div class="form-container">
+    <h2 class="text-center text-white">Create Account</h2>
+    <form (ngSubmit)="onsubmit()" #myform="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" ngModel required pattern="^[A-Za-z ]*$" #name = "ngModel" minlength="2" maxlength="30">
+            <div>
+                <small *ngIf ="name.invalid && name.touched">Enter A Valid Name</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input type="text" class="form-control" id="uname" name="uname" ngModel required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$" #uname = "ngModel">
+            <div>
+                <small *ngIf ="uname.invalid && uname.touched">Enter a valid username with a number and spl character</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-group">
+                <input class="form-control" id="password" name="pass" [(ngModel)]="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" #pass="ngModel" [type]="showpassword ? 'text' : 'password'">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary passbutton" (click)="toggleshowpass()">
+                        {{ showpassword ? 'Hide Password' : 'Show Password' }}
+                    </button>
+                </div>
+            </div>
+            <div>
+                <small *ngIf="pass.invalid && pass.touched">Password must contain a number, uppercase letter, and special character, and be at least 8 characters long.</small>
+                <small *ngIf="showpassword">You Entered: {{password}}</small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="date">DOB</label>
+            <input type="date" class="form-control" id="date" name="dob" ngModel required #dob = "ngModel">
+            <div>
+                <small *ngIf = "dob.invalid && dob.touched">DOB is a Mandatory Field ! </small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="d-flex justify-content-between">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="male" name="gender" value="male" ngModel #gender="ngModel" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="female" name="gender" value="female" ngModel required>
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="others" name="gender" value="others" ngModel required>
+                    <label class="form-check-label" for="others">Others</label>
+                </div>
+            </div>
+            <div>
+                <small *ngIf="gender.invalid && gender.touched">Gender is a mandatory field</small>
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-block subbutton" value="Create Account" [disabled]="myform.invalid">
+        </div>
+    </form>
+</div>
